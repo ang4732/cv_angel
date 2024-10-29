@@ -3,7 +3,7 @@ const { Client }= pg;
 
 const config={
     user: 'cv_bd_user',
-    host: 'dpg-csg5nq08fa8c73fra020-a.oregon-postgres.render.com',
+    host: 'dpg-csg5nq08fa8c73fra020-a',
     database: 'cv_bd',
     password: 'C2crgQPpNEvE26INOlvqwD5ttLIBCLnA',
     port: 5432,
