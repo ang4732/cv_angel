@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/src/public/css/style.css"> -->
+    <title><%= title %></title>
+    <%- include('partials/head') %>
+    
+</head>
+<body>
+    <%- include('partials/navigation') %>
+   
+    <main class="main-content">
+        <section class="section" id="about">
+            <h3 class="section-title">Sobre mí</h3>
+            <p>
+                Desarrolladora Full Stack con 5 meses de experiencia en el desarrollo de aplicaciones web.
+                Apasionada por crear soluciones tecnológicas innovadoras y escalables.
+                Especializada en JavaScript.
+            </p>
+        </section>
+
+        <section class="section" id="skills">
+            <h3 class="section-title">Habilidades</h3>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h4>Frontend</h4>
+                    <ul>
+                        <li>HTML5, CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Backend</h4>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>SQL server</li>
+                        <li>Oracle</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>DevOps</h4>
+                    <ul>
+                        <li>Docker</li>
+                        <li>AWS</li>
+                        <li>CI/CD</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <h3 class="section-title">Proyectos</h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h4>E-commerce Platform</h4>
+                    <p>Plataforma de comercio electrónico con gestión de productos y pagos.</p>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                    <a href="#" target="_blank">Ver proyecto</a>
+                </div>
+                <div class="project-card">
+                    <h4>Task Manager</h4>
+                    <p>Aplicación de gestión de tareas con autenticación y tiempo real.</p>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="#" target="_blank">Ver proyecto</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <h3 class="section-title">Experiencia</h3>
+            <div class="experience-item">
+                <h4>Senior Developer</h4>
+                <div class="company">Tech Solutions Inc.</div>
+                <div class="period">2020 - Presente</div>
+                <p>Desarrollo de aplicaciones web escalables y mantenimiento de infraestructura cloud.</p>
+            </div>
+            <div class="experience-item">
+                <h4>Full Stack Developer</h4>
+                <div class="company">Digital Innovation Co.</div>
+                <div class="period">2018 - 2020</div>
+                <p>Implementación de nuevas funcionalidades y optimización de rendimiento.</p>
+            </div>
+        </section>
+    </main>
+    <%- include('partials/footer') %>
+    </div>
+    <script>
+        // Animación suave para los enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Añadir animación al hacer hover sobre las cards de proyectos
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mouseover', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+
+            card.addEventListener('mouseout', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
